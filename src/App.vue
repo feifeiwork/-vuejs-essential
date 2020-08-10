@@ -1,33 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <h1>Welcome to Your Vue.js App</h1>
-    <h1>Welcome to Your Vue.js App</h1>
+  <div id="wrap">
+    <TheHeader/>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from '@/components/layouts/TheHeader'
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld
+    TheHeader
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 200px;
+$container-large-desktop: 1200px;
+$btn-primary-bg: #00b5ad;
+$btn-primary-border: #00b5ad;
+$label-primary-bg: #00b5ad;
+$pagination-active-bg: #00b5ad;
+$pagination-active-border: #00b5ad;
+$pagination-color: #00b5ad;
+$input-border-focus: #00b5ad;
+$link-color: #12c4c5;
+$link-hover-color: #22ddde;
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$fa-font-path: "~font-awesome/fonts/";
 
-  h1 {
-    color: #42b983;
-  }
-}
+@import "~bootstrap-sass/assets/stylesheets/_bootstrap";
+@import "~font-awesome/scss/font-awesome";
+@import "./styles/main";
+@import "./styles/extra";
 </style>
